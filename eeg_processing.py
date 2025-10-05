@@ -19,8 +19,9 @@ def get_data():
             exit()
 
     # Connecting it to stream
-    inlet = StreamInlet(streams[0])
     stream_info = streams[0]
+    inlet = StreamInlet(stream_info)
+    
     print(f"Successfully connected to stream: {stream_info.name()} ({stream_info.type()})")
 
     while True:
