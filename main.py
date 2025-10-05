@@ -154,7 +154,6 @@ def main():
     running = True
     while running:
         running = process_events(player, maze)
-
         screen.fill(BACKGROUND_COLOR)
         draw_maze(maze, player, last)
         pygame.display.flip()
