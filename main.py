@@ -5,6 +5,7 @@ import sys
 # -----------------
 import threading
 from eeg_processing import get_data
+import time
 # ----------------
 
 
@@ -136,18 +137,31 @@ def process_keydown(key, player, maze, last):
         new_y = player.rect.y // CELL_SIZE + dy
         if is_path(maze, new_x, new_y):
             player.move(dx, dy)
+            if new_x == last[1] and new_y == last[0]:
+                time.sleep(0.1)
+                screen.fill((0, 0, 0))
+                pygame.display.update()
+                font = pygame.font.SysFont('Trebuchet MS', 30)
+                text = font.render('Game over', True, (255, 255, 255))
+                text_rect = text.get_rect(center=(screen.get_width() // 2, screen.get_height() // 2))
+                screen.blit(text, text_rect)
+                pygame.display.update()
+                time.sleep(3)
+                pygame.quit()
+                sys.exit()
 
+                
 def main():
     pygame.init()
+    pygame.font.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
 
     maze, last = generate_maze(SCREEN_WIDTH // CELL_SIZE-1, SCREEN_HEIGHT // CELL_SIZE-1)
     player = Player(1, 1)
 
-
     # ------
-    #threading.Thread(target=fake_function, daemon=True).start()
+    #threading.Thread(target=get_data, daemon=True).start()
     # ------
 
     running = True
