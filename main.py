@@ -4,7 +4,7 @@ import sys
 
 # -----------------
 import threading
-from eeg_processing import fake_function
+from eeg_processing import get_data
 # ----------------
 
 
@@ -12,13 +12,14 @@ from eeg_processing import fake_function
 pygame.init()
 
 # Constants
-SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
+SCREEN_WIDTH, SCREEN_HEIGHT = 600, 600
 BACKGROUND_COLOR = (0, 0, 0)
 WALL_COLOR = (255, 255, 255)
 PATH_COLOR = (0, 0, 255)
 PLAYER_COLOR = (255, 0, 0)
 END_COLOR = (0, 255, 0)
-CELL_SIZE = 40
+WIN_COLOR = (0, 0, 0)
+CELL_SIZE = 50
 WALL_THICKNESS = 2
 FPS = 60
 
@@ -111,18 +112,18 @@ def generate_maze(width, height):
     return maze, last
 
 
-def process_events(player, maze):
+def process_events(player, maze, last):
     """Handle all Pygame events and return a boolean status for the game loop."""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             return False
         if event.type == pygame.KEYDOWN:
-            if process_keydown(event.key, player, maze):
+            if process_keydown(event.key, player, maze, last):
                 return False
     return True
 
 
-def process_keydown(key, player, maze):
+def process_keydown(key, player, maze, last):
     """Process keydown events and move the player if the path is valid."""
     directions = {
         pygame.K_LEFT: (-1, 0),
@@ -137,23 +138,22 @@ def process_keydown(key, player, maze):
         if is_path(maze, new_x, new_y):
             player.move(dx, dy)
 
-
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
 
-    maze, last = generate_maze(SCREEN_WIDTH // CELL_SIZE, SCREEN_HEIGHT // CELL_SIZE)
+    maze, last = generate_maze(SCREEN_WIDTH // CELL_SIZE-1, SCREEN_HEIGHT // CELL_SIZE-1)
     player = Player(1, 1)
 
 
     # ------
-    threading.Thread(target=fake_function, daemon=True).start()
+    #threading.Thread(target=fake_function, daemon=True).start()
     # ------
 
     running = True
     while running:
-        running = process_events(player, maze)
+        running = process_events(player, maze, last)
         screen.fill(BACKGROUND_COLOR)
         draw_maze(maze, player, last)
         pygame.display.flip()

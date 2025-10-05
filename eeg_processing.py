@@ -1,7 +1,7 @@
 import pygame
 import time
 import random
-from pylsl import StreamInlet, resolve_stream, resolve_byprop
+from pylsl import StreamInlet, resolve_byprop
 
 LSL_STREAM = ''
 STREAM_TYPE = 'Markers' # or 'Triggers'
