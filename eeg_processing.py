@@ -36,6 +36,8 @@ def run_udp_listener():
                     print(value)
                     if value is None:
                         chosen_key = pygame.K_UP
+                        event = pygame.event.Event(pygame.KEYDOWN, key=chosen_key)
+                        pygame.event.post(event)
                     else:
                         value = CONTROLS[value]
                         if value == 'L':
