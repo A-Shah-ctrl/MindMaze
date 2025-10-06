@@ -8,7 +8,7 @@ BUFFER_SIZE = 65536
 CONTROLS = {
             'left': 'L',
             'right': 'R',
-            'upward': 'U',
+            'up': 'T',
             'down': 'D',
             'empty': 'X'
             }   
@@ -30,28 +30,28 @@ def run_udp_listener():
                 #print(data)
                 
                 # Use regex to look for keywords
-                match = re.search(r"\b(Left|Right|Upward|Down|Empty)\b", text, re.IGNORECASE)
+                match = re.search(r"\b(Left|Right|Up|Down|Empty)\b", text, re.IGNORECASE)
                 if match:
-                    value = CONTROLS[match.group(1).lower()]
+                    value = match.group(1).lower()
                     print(value)
-                    if value == 'L':
-                        chosen_key = pygame.K_LEFT
-                        event = pygame.event.Event(pygame.KEYDOWN, key=chosen_key)
-                        pygame.event.post(event)
-                    elif value == 'R':
-                        chosen_key = pygame.K_RIGHT
-                        event = pygame.event.Event(pygame.KEYDOWN, key=chosen_key)
-                        pygame.event.post(event)
-                    elif value == 'D':
-                        chosen_key = pygame.K_DOWN
-                        event = pygame.event.Event(pygame.KEYDOWN, key=chosen_key)
-                        pygame.event.post(event)
-                    elif value == "X":
-                        pass
-                    else:
+                    if value is None:
                         chosen_key = pygame.K_UP
-                        event = pygame.event.Event(pygame.KEYDOWN, key=chosen_key)
-                        pygame.event.post(event)
+                    else:
+                        value = CONTROLS[value]
+                        if value == 'L':
+                            chosen_key = pygame.K_LEFT
+                            event = pygame.event.Event(pygame.KEYDOWN, key=chosen_key)
+                            pygame.event.post(event)
+                        elif value == 'R':
+                            chosen_key = pygame.K_RIGHT
+                            event = pygame.event.Event(pygame.KEYDOWN, key=chosen_key)
+                            pygame.event.post(event)
+                        elif value == 'D':
+                            chosen_key = pygame.K_DOWN
+                            event = pygame.event.Event(pygame.KEYDOWN, key=chosen_key)
+                            pygame.event.post(event)
+                        elif value == "X":
+                            pass
 
             except Exception as e:
                 print(f"Error decoding: {e}")
