@@ -1,7 +1,7 @@
 # gTech_IECC_Hackathon_2025: MindMaze 🧠🕹️
 **3rd Place Winner – g.Tech Hackathon 2025 (Gaming Category)**  
 
-<img src="media/certificate.png" width="450">
+<img src="media/certificate.PNG" width="450">
 
 ---
 ## 🧩 Overview 🧩
