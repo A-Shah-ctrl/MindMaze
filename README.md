@@ -15,7 +15,7 @@ The goal was to build a *plug-and-play neurogaming demo* that:
 - Classifies attention-driven responses. 
 - Sends UDP signals to control game states in PyGame.
 
-The presentation for our project can be found at [`media/g28_YourGamingProject_EEG-Maze_Queen's University.mp4`](media/g28_YourGamingProject_EEG-Maze_Queen's University.mp4)
+The presentation for our project can be found at [`media/g28_YourGamingProject_EEG-Maze_Queens_University.mp4`](media/g28_YourGamingProject_EEG-Maze_Queens_University.mp4)
   
 ---
 
