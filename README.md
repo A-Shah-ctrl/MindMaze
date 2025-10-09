@@ -22,6 +22,7 @@ The presentation for our project can be found at [`media/g28_YourGamingProject_E
 ## ⚒️ System pipeline ⚒️
 
 <img src="media/design.png" width="700">
+
 ---
 
 ## 📋 Implementation 📋
