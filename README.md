@@ -19,7 +19,7 @@ The goal was to build a *plug-and-play neurogaming demo* that:
 
 ## ⚒️ System pipeline ⚒️
 
-<img src="media/design.png" width="450">
+<img src="media/design.png" width="700">
 ---
 
 ## 📋 Implementation 📋
@@ -35,6 +35,7 @@ The goal was to build a *plug-and-play neurogaming demo* that:
 ## 🎮 Demo 🎮 
 
 <video src="Demo.mp4" width="640" height="360" controls></video>
+
 ---
 
 ## 📊 Results 📊
