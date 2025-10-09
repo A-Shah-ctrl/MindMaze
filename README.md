@@ -64,10 +64,10 @@ See detailed write-up in [`docs/reflection.md`](docs/reflection.md).
 ## 🧑‍🔬 Contributors 🧑‍🔬
 | Name | GitHub | Role |
 |------|------| ------|
-| Apurva Singh | Apurva-2703 | EEG Signal Recording, Unicorn board setup, Write-up|
-| Ashka Shah | A-Shah-ctrl | Game UI and integration, UDP/IP Networking, Presentation|
-| Jaspreet Dodd | jaspreet-dodd | EEG setup and calibration, Speller redesign|
-| Sahana Radha | bananers | Board design, Pipeline optimization, UDP networking |
+| Apurva Singh | [`Apurva-2703`](https://github.com/Apurva-2703) | EEG Signal Recording, Unicorn board setup, Write-up|
+| Ashka Shah | [`A-Shah-ctrl`](https://github.com/A-Shah-ctrl) | Game UI and integration, UDP/IP Networking, Presentation|
+| Jaspreet Dodd | [`jaspreet-dodd`](https://github.com/jaspreet-dodd) | EEG setup and calibration, Speller redesign|
+| Sahana Radha | [`bananers`](https://github.com/bananers) | Board design, Pipeline optimization, UDP networking |
 
 ---
 
