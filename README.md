@@ -59,12 +59,12 @@ See detailed write-up in [`docs/reflection.md`](docs/reflection.md).
 ---
 
 ## 🧑‍🔬 Contributors 🧑‍🔬
-| Name | Role |
-|------|------|
-| Apurva Singh | EEG Signal Recording, Unicorn board setup, Write-up|
-| Ashka Shah | Game UI and integration, UDP/IP Networking, Presentation|
-| Jaspreet Dodd | EEG setup and calibration, Speller redesign|
-| Sahana Radha | Board design, Pipeline optimization, UDP networking |
+| Name | GitHub | Role |
+|------|------| ------|
+| Apurva Singh | Apurva-2703 | EEG Signal Recording, Unicorn board setup, Write-up|
+| Ashka Shah | A-Shah-ctrl | Game UI and integration, UDP/IP Networking, Presentation|
+| Jaspreet Dodd | jaspreet-dodd | EEG setup and calibration, Speller redesign|
+| Sahana Radha | bananers | Board design, Pipeline optimization, UDP networking |
 
 ---
 
