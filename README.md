@@ -39,6 +39,8 @@ The presentation for our project can be found at [`media/g28_YourGamingProject_E
 
 The demo for out project can be found at [`media/Demo.mp4`](media/Demo.mp4)
 
+Our final [`presentation`](media/presentation_slides.pptx) can be found [`here`](media/g28_YourGamingProject_EEG-Maze_Queens_University.mp4)
+
 ---
 
 ## 📊 Results 📊
