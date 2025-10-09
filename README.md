@@ -13,9 +13,10 @@ We used the **Unicorn Hybrid Black** headset with the **Unicorn Suite** - specif
 The goal was to build a *plug-and-play neurogaming demo* that:
 - Captures event-related potentials (ERPs) via P300 task design.  
 - Classifies attention-driven responses. 
-- Sends UDP signals to control game states in PyGame. 
+- Sends UDP signals to control game states in PyGame.
 
-Presentation of the project can be found at [`media/g28_YourGamingProject_EEG-Maze_Queen's University.mp4`](media/g28_YourGamingProject_EEG-Maze_Queen's University.mp4).
+The presentation for our project can be found at [`media/g28_YourGamingProject_EEG-Maze_Queen's University.mp4`](media/g28_YourGamingProject_EEG-Maze_Queen's University.mp4)
+  
 ---
 
 ## ⚒️ System pipeline ⚒️
